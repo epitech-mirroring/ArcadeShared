@@ -12,6 +12,6 @@
 
 class ISprite {
 public:
-    std::shared_ptr<IPicture> getPicture() = 0;
-    void setPicture(std::unique_ptr<IPicture> picture) = 0;
+    virtual std::shared_ptr<IPicture> getPicture() = 0;
+    virtual void setPicture(std::unique_ptr<IPicture> picture) = 0;
 };
