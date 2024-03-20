@@ -8,9 +8,9 @@
 
 #pragma once
 
-class IRotation {
+class ICanRotate {
 public:
-    virtual ~IRotation() = default;
+    virtual ~ICanRotate() = default;
     virtual float getRotation() = 0;
     virtual void setRotation(float angle) = 0;
 };
