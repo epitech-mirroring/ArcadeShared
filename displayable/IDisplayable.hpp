@@ -15,5 +15,7 @@ public:
     virtual ICoordinate getPosition() = 0;
     virtual int getSize() = 0;
     virtual void setPosition(ICoordinate position) = 0;
+    virtual float getRotation() = 0;
+    virtual void setRotation(float angle) = 0;
     virtual void setSize(int size) = 0;
 };
