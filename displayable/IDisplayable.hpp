@@ -8,12 +8,13 @@
 
 #pragma once
 #include "../utils/ICoordinate.hpp"
+#include <memory>
 
 class IDisplayable {
 public:
     virtual ~IDisplayable() = default;
-    virtual ICoordinate getPosition() = 0;
-    virtual int getSize() = 0;
-    virtual void setPosition(ICoordinate position) = 0;
+    virtual const std::unique_ptr<ICoordinate> &getPosition() const = 0;
+    virtual int getSize() const = 0;
+    virtual void setPosition(ICoordinate &position) = 0;
     virtual void setSize(int size) = 0;
 };
