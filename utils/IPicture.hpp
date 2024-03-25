@@ -11,6 +11,6 @@
 
 class IPicture {
 public:
-    virtual std::string getPath() = 0;
+    virtual std::string getPath() const = 0;
     virtual void setPath(std::string path) = 0;
 };
