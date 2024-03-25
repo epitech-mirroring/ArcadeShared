@@ -13,6 +13,6 @@ class IDriverError: public IError {
 public:
     virtual ~IDriverError() = default;
     virtual int getCode() const = 0;
-    virtual std::shared_ptr<IDriver> getDriver() const = 0;
+    virtual const std::unique_ptr<IDriver> &getDriver() const = 0;
     virtual const char *what() const noexcept = 0;
 };

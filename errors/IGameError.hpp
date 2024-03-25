@@ -13,6 +13,6 @@ class IGameError: public IError {
 public:
     virtual ~IGameError() = default;
     virtual int getCode() const = 0;
-    virtual std::shared_ptr<IGame> getGame() const = 0;
+    virtual const std::unique_ptr<IGame> &getGame() const = 0;
     virtual const char *what() const noexcept = 0;
 };
