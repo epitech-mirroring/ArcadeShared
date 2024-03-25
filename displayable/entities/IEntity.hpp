@@ -14,6 +14,6 @@
 class IEntity: public IDisplayable {
 public:
     virtual ~IEntity() = default;
-    virtual std::shared_ptr<ISprite> getSprite() = 0;
-    virtual void setSprite(std::unique_ptr<ISprite> sprite) = 0;
+    virtual const std::unique_ptr<ISprite> &getSprite() const = 0;
+    virtual void setSprite(ISprite &sprite) = 0;
 };
