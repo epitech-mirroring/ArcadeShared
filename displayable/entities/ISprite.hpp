@@ -13,6 +13,6 @@
 class ISprite {
 public:
     virtual ~ISprite() = default;
-    virtual std::shared_ptr<IPicture> getPicture() = 0;
+    virtual const std::unique_ptr<IPicture> &getPicture() const = 0;
     virtual void setPicture(std::unique_ptr<IPicture> picture) = 0;
 };
