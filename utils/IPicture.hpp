@@ -11,6 +11,7 @@
 
 class IPicture {
 public:
-    virtual std::string getPath() = 0;
-    virtual void setPath(std::string path) = 0;
+    virtual ~IPicture() = default;
+    virtual const std::string &getPath() const = 0;
+    virtual void setPath(const std::string &path) = 0;
 };

@@ -25,7 +25,7 @@ public:
     virtual ~IEvent() = default;
     virtual EventType getType() = 0;
     virtual EventKey getKey() = 0;
-    virtual ICoordinate getPosition() = 0;
+    virtual std::unique_ptr<ICoordinate> &getPosition() = 0;
 };
 
 typedef void (*EventCallback)(std::shared_ptr<IEvent> event);

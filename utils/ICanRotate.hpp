@@ -17,6 +17,6 @@ const float RIGHT = 0;
 
 public:
     virtual ~ICanRotate() = default;
-    virtual float getRotation() = 0;
+    virtual float getRotation() const = 0;
     virtual void setRotation(float angle) = 0;
 };

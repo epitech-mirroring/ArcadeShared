@@ -14,5 +14,5 @@
 class IPrimitive: public IDisplayable {
 public:
     virtual ~IPrimitive() = default;
-    virtual IColor getColor() = 0;
+    virtual const std::unique_ptr<IColor> &getColor() const = 0;
 };
