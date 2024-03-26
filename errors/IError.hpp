@@ -6,6 +6,7 @@
 ** You can even have multiple lines if you want !
 */
 
+#pragma once
 #include <string>
 #include <memory>
 #include <exception>
