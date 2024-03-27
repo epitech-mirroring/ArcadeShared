@@ -10,6 +10,7 @@
 #include <memory>
 #include "Keys.hpp"
 #include "../utils/ICoordinate.hpp"
+#include <functional>
 
 class IEvent {
 public:
@@ -28,4 +29,4 @@ public:
     virtual std::unique_ptr<ICoordinate> &getPosition() = 0;
 };
 
-typedef void (*EventCallback)(std::shared_ptr<IEvent> event);
+typedef std::function<void(IEvent &)> EventCallback;
