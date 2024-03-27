@@ -1,4 +1,4 @@
-# Arcade Project - Shared Interface
+# Arcade Project - Shared Interfaces
 
 ## Introduction
 This document outlines the shared part for the Arcade project, that will be used by both Group. The purpose of these interfaces is to ensure compatibility between the two groups components, and for loading shared libraries using DLLoaders.
