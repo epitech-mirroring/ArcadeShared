@@ -29,8 +29,10 @@ extern "C" {
 - `create_driver()`: This function is mandatory for drivers. It should return a unique pointer to the driver instance.
 - `create_game()`: This function is mandatory for games. It should return a unique pointer to the game instance.
 - `get_name()`: This function is optional. It should return a constant reference to a string containing the name of the component.
-- `load_lib()`: This function is optional. It is called when the shared library is loaded.
-- `unload_lib()`: This function is optional. It is called when the shared library is unloaded.
+- `load_lib()`: This function is optional. It is called when the shared library is loaded. This function can only be used with the `__attribute__((constructor))` attribute and will **ONLY** display a message / information about the shared library in the console.
+- `unload_lib()`: This function is optional. It is called when the shared library is unloaded. This function can only be used with the `__attribute__((destructor))` attribute and will **ONLY** display a message / information about the shared library in the console.
+
+
 
 ## Instructions for the Groups
 Both Groups should ensure that their shared libraries export symbols according to the structure provided above. This will ensure seamless integration and compatibility between the components developed by the two groups.
