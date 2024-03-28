@@ -13,7 +13,7 @@
 
 class IError: std::exception {
 public:
-    virtual ~IError() = default;
-    virtual int getCode() const = 0;
-    virtual const char *what() const noexcept = 0;
+    ~IError() override = default;
+    [[nodiscard]] virtual int getCode() const = 0;
+    [[nodiscard]] const char *what() const noexcept override = 0;
 };

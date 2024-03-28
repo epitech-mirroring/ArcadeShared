@@ -9,14 +9,12 @@
 #pragma once
 
 class ICanRotate {
-
-const float UP = 90;
-const float DOWN = 270;
-const float LEFT = 180;
-const float RIGHT = 0;
-
 public:
+    const float UP = 90;
+    const float DOWN = 270;
+    const float LEFT = 180;
+    const float RIGHT = 0;
     virtual ~ICanRotate() = default;
-    virtual float getRotation() const = 0;
+    [[nodiscard]] virtual float getRotation() const = 0;
     virtual void setRotation(float angle) = 0;
 };

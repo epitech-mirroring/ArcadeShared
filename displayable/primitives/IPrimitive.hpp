@@ -11,8 +11,8 @@
 #include "../IDisplayable.hpp"
 #include "../../utils/IColor.hpp"
 
-class IPrimitive: public IDisplayable {
+class IPrimitive: public virtual IDisplayable {
 public:
-    virtual ~IPrimitive() = default;
-    virtual const std::unique_ptr<IColor> &getColor() const = 0;
+    ~IPrimitive() override = default;
+    [[nodiscard]] virtual const std::unique_ptr<IColor> &getColor() const = 0;
 };

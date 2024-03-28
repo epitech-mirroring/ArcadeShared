@@ -9,9 +9,9 @@
 #include <memory>
 #include "IPrimitive.hpp"
 
-class IText: public IPrimitive {
+class IText: public virtual IPrimitive {
 public:
-    virtual ~IText() = default;
+    ~IText() override = default;
     virtual const std::string &getText() const = 0;
     virtual void setText(const std::string &text) = 0;
 };

@@ -16,5 +16,5 @@ public:
     virtual void init(std::shared_ptr<IArcade> arcade) = 0;
     virtual void start() = 0;
     virtual void run() = 0;
-    virtual int getScore() = 0;
+    [[nodiscard]] virtual int getScore() = 0;
 };
