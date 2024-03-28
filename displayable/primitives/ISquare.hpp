@@ -10,9 +10,9 @@
 #include <memory>
 #include "IPrimitive.hpp"
 
-class ISquare: public IPrimitive {
+class ISquare: public virtual IPrimitive {
 public:
-    virtual ~ISquare() = default;
+    ~ISquare() override = default;
     virtual size_t getWidth() const = 0;
     virtual size_t getHeight() const = 0;
     virtual void setWidth(size_t width) = 0;

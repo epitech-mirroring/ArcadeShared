@@ -10,10 +10,8 @@
 #include "../IGame.hpp"
 #include "IError.hpp"
 
-class IGameError: public IError {
+class IGameError: public virtual IError {
 public:
-    virtual ~IGameError() = default;
-    virtual int getCode() const = 0;
-    virtual const std::unique_ptr<IGame> &getGame() const = 0;
-    virtual const char *what() const noexcept = 0;
+    ~IGameError() override = default;
+    [[nodiscard]]  virtual const std::unique_ptr<IGame> &getGame() const = 0;
 };

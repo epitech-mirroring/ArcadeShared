@@ -10,9 +10,9 @@
 #include <memory>
 #include "IPrimitive.hpp"
 
-class ICircle: public IPrimitive {
+class ICircle: public virtual IPrimitive {
 public:
-    virtual ~ICircle() = default;
-    virtual size_t getRadius() const = 0;
+    ~ICircle() override = default;
+    [[nodiscard]] virtual size_t getRadius() const = 0;
     virtual void setRadius(size_t radius) = 0;
 };

@@ -11,9 +11,9 @@
 #include "../IDisplayable.hpp"
 #include "ISprite.hpp"
 
-class IEntity: public IDisplayable {
+class IEntity: public virtual IDisplayable {
 public:
-    virtual ~IEntity() = default;
-    virtual const std::unique_ptr<ISprite> &getSprite() const = 0;
+    ~IEntity() override = default;
+    [[nodiscard]] virtual const std::unique_ptr<ISprite> &getSprite() const = 0;
     virtual void setSprite(ISprite &sprite) = 0;
 };

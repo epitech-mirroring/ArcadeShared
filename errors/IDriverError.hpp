@@ -10,10 +10,8 @@
 #include "../IDriver.hpp"
 #include "IError.hpp"
 
-class IDriverError: public IError {
+class IDriverError: public virtual IError {
 public:
-    virtual ~IDriverError() = default;
-    virtual int getCode() const = 0;
+    ~IDriverError() override = default;
     virtual const std::unique_ptr<IDriver> &getDriver() const = 0;
-    virtual const char *what() const noexcept = 0;
 };

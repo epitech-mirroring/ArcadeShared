@@ -12,10 +12,10 @@
 class IColor {
 public:
     virtual ~IColor() = default;
-    virtual size_t getR() const = 0;
-    virtual size_t getG() const = 0;
-    virtual size_t getB() const = 0;
-    virtual size_t getA() const = 0;
+    [[nodiscard]] virtual size_t getR() const = 0;
+    [[nodiscard]] virtual size_t getG() const = 0;
+    [[nodiscard]] virtual size_t getB() const = 0;
+    [[nodiscard]] virtual size_t getA() const = 0;
     virtual void setR(size_t r) = 0;
     virtual void setG(size_t g) = 0;
     virtual void setB(size_t b) = 0;
