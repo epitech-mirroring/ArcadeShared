@@ -13,5 +13,5 @@
 class IDriverError: public virtual IError {
 public:
     ~IDriverError() override = default;
-    virtual const std::unique_ptr<IDriver> &getDriver() const = 0;
+    [[nodiscard]] virtual const IDriver &getDriver() const = 0;
 };

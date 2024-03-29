@@ -13,6 +13,6 @@
 class ICircle: public virtual IPrimitive {
 public:
     ~ICircle() override = default;
-    [[nodiscard]] virtual size_t getRadius() const = 0;
-    virtual void setRadius(size_t radius) = 0;
+    [[nodiscard]] virtual std::size_t getRadius() const = 0;
+    virtual void setRadius(std::size_t radius) = 0;
 };

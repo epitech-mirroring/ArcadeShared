@@ -16,7 +16,7 @@ public:
     virtual ~IArcade() = default;
 
     // Driver functions for games
-    virtual void display(std::shared_ptr<IDisplayable> displayable) = 0;
+    virtual void display(const IDisplayable &displayable) = 0;
     virtual void flipFrame() = 0;
     virtual void bindEvent(IEvent::EventType type, EventKey key, EventCallback callback) = 0;
     virtual void setPreferredSize(std::size_t width, std::size_t height) = 0;

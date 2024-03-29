@@ -13,5 +13,5 @@
 class IGameError: public virtual IError {
 public:
     ~IGameError() override = default;
-    [[nodiscard]]  virtual const std::unique_ptr<IGame> &getGame() const = 0;
+    [[nodiscard]] virtual const IGame &getGame() const = 0;
 };

@@ -14,5 +14,5 @@
 class IPrimitive: public virtual IDisplayable {
 public:
     ~IPrimitive() override = default;
-    [[nodiscard]] virtual const std::unique_ptr<IColor> &getColor() const = 0;
+    [[nodiscard]] virtual const IColor &getColor() const = 0;
 };
