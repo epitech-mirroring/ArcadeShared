@@ -26,7 +26,7 @@ public:
     virtual ~IEvent() = default;
     [[nodiscard]] virtual EventType getType() = 0;
     [[nodiscard]] virtual EventKey getKey() = 0;
-    [[nodiscard]] virtual std::unique_ptr<ICoordinate> &getPosition() = 0;
+    [[nodiscard]] virtual const ICoordinate &getPosition() = 0;
 };
 
-typedef std::function<void(IEvent &)> EventCallback;
+typedef std::function<void(const IEvent &)> EventCallback;

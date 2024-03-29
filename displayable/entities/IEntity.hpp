@@ -14,6 +14,7 @@
 class IEntity: public virtual IDisplayable {
 public:
     ~IEntity() override = default;
-    [[nodiscard]] virtual const std::unique_ptr<ISprite> &getSprite() const = 0;
-    virtual void setSprite(ISprite &sprite) = 0;
+    [[nodiscard]] virtual const ISprite &getSprite() const = 0;
+    virtual void setSprite(const ISprite &sprite) = 0;
+    virtual void setSprite(std::unique_ptr<ISprite> sprite) = 0;
 };

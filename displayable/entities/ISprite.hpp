@@ -13,6 +13,7 @@
 class ISprite {
 public:
     virtual ~ISprite() = default;
-    [[nodiscard]] virtual const std::unique_ptr<IPicture> &getPicture() const = 0;
+    [[nodiscard]] virtual const IPicture &getPicture() const = 0;
+    virtual void setPicture(const IPicture &picture) = 0;
     virtual void setPicture(std::unique_ptr<IPicture> picture) = 0;
 };
