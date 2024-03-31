@@ -58,6 +58,19 @@ const EventKey KEY_RIGHT = 43;
 const EventKey KEY_TAB = 44;
 const EventKey KEY_SHIFT = 45;
 const EventKey KEY_CTRL = 46;
+const EventKey KEY_F1 = 47;
+const EventKey KEY_F2 = 48;
+const EventKey KEY_F3 = 49;
+const EventKey KEY_F4 = 50;
+const EventKey KEY_F5 = 51;
+const EventKey KEY_F6 = 52;
+const EventKey KEY_F7 = 53;
+const EventKey KEY_F8 = 54;
+const EventKey KEY_F9 = 55;
+const EventKey KEY_F10 = 56;
+const EventKey KEY_F11 = 57;
+const EventKey KEY_F12 = 58;
+
 
 const EventKey MOUSE_LEFT_CLICK = 100;
 const EventKey MOUSE_RIGHT_CLICK = 101;
