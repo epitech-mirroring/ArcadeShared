@@ -15,12 +15,12 @@
 class IEvent {
 public:
     enum EventType {
-        KEY_DOWN,
-        KEY_UP,
-        KEY_PRESS,
-        MOUSE_DOWN,
-        MOUSE_UP,
-        MOUSE_MOVE,
+        _KEY_DOWN,
+        _KEY_UP,
+        _KEY_PRESS,
+        _MOUSE_DOWN,
+        _MOUSE_UP,
+        _MOUSE_MOVE,
     };
 
     virtual ~IEvent() = default;
