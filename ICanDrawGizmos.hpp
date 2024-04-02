@@ -15,7 +15,7 @@ public:
     virtual ~ICanDrawGizmos() = default;
 
     virtual bool isGizmosEnabled() const = 0;
-    virtual void drawLine(const ICoordinate &start, const ICoordinate &end, const IColor &color) const = 0;
-    virtual void drawCircle(const ICoordinate &center, float radius, const IColor &color) const = 0;
-    virtual void drawRect(const ICoordinate &topLeft, const ICoordinate &bottomRight, bool fill, const IColor &color) const = 0;
+    virtual void drawLine(const ICoordinate &start, const ICoordinate &end, const IColor &color) = 0;
+    virtual void drawCircle(const ICoordinate &center, std::size_t radius, const IColor &color) = 0;
+    virtual void drawRect(const ICoordinate &topLeft, const ICoordinate &bottomRight, bool fill, const IColor &color) = 0;
 };
