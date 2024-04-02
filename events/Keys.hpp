@@ -11,6 +11,10 @@
 
 typedef size_t EventKey;
 
+#ifdef _KEY_T
+#undef _KEY_T
+#endif
+
 const EventKey _KEY_A = 0;
 const EventKey _KEY_Z = 1;
 const EventKey _KEY_E = 2;
