@@ -18,4 +18,5 @@ public:
     virtual void setWidth(std::size_t width) = 0;
     virtual void setHeight(std::size_t height) = 0;
     virtual bool isFilled() const = 0;
+    virtual void setIsFilled(bool isFilled) = 0;
 };

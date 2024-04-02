@@ -15,4 +15,6 @@ public:
     ~ILine() override = default;
     // The start is the position of the object
     [[nodiscard]] virtual const ICoordinate &getEnd() const = 0;
+    virtual void setEnd(const ICoordinate &end) = 0;
+    virtual void setEnd(std::unique_ptr<ICoordinate> end) = 0;
 };
