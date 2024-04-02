@@ -13,5 +13,4 @@
 class IGameError: public virtual IError {
 public:
     ~IGameError() override = default;
-    [[nodiscard]] virtual const IGame &getGame() const = 0;
 };
