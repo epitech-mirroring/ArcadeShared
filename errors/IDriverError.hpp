@@ -13,5 +13,4 @@
 class IDriverError: public virtual IError {
 public:
     ~IDriverError() override = default;
-    [[nodiscard]] virtual const IDriver &getDriver() const = 0;
 };
