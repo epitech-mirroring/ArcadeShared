@@ -13,7 +13,7 @@
 class IGame {
 public:
     virtual ~IGame() = default;
-    virtual void init(IArcade &arcade) = 0;
+    virtual void init(std::shared_ptr<IArcade> arcade) = 0;
     virtual void start() = 0;
     virtual void run() = 0;
     [[nodiscard]] virtual int getScore() = 0;

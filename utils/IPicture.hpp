@@ -14,4 +14,6 @@ public:
     virtual ~IPicture() = default;
     [[nodiscard]] virtual const std::string &getPath() const = 0;
     virtual void setPath(const std::string &path) = 0;
+    [[nodiscard]] virtual std::size_t getWidth() const = 0;
+    [[nodiscard]] virtual std::size_t getHeight() const = 0;
 };
