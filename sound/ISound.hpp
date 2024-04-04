@@ -8,7 +8,6 @@
 
 #pragma once
 
-#include "../utils/ICoordinate.hpp"
 #include <string>
 
 class ISound {
