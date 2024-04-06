@@ -8,6 +8,7 @@
 
 #pragma once
 #include "../utils/ICoordinate.hpp"
+#include "../utils/IColor.hpp"
 #include <memory>
 
 class IDisplayable {
@@ -19,4 +20,7 @@ public:
     virtual void setPosition(std::unique_ptr<ICoordinate> position) = 0;
     virtual void setSize(float size) = 0;
     [[nodiscard]] virtual char getReplacingChar() const = 0;
+    [[nodiscard]] virtual const IColor &getColor() const = 0;
+    virtual void setColor(const IColor &color) = 0;
+    virtual void setColor(std::unique_ptr<IColor> color) = 0;
 };

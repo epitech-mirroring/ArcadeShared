@@ -9,12 +9,8 @@
 #pragma once
 #include <memory>
 #include "../IDisplayable.hpp"
-#include "../../utils/IColor.hpp"
 
 class IPrimitive: public virtual IDisplayable {
 public:
     ~IPrimitive() override = default;
-    [[nodiscard]] virtual const IColor &getColor() const = 0;
-    virtual void setColor(const IColor &color) = 0;
-    virtual void setColor(std::unique_ptr<IColor> color) = 0;
 };
