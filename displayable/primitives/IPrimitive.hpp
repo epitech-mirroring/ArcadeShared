@@ -12,5 +12,5 @@
 
 class IPrimitive: public virtual IDisplayable {
 public:
-    ~IPrimitive() override = default;;
+    ~IPrimitive() override = default;
 };
