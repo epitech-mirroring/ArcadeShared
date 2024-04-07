@@ -16,3 +16,10 @@ public:
     virtual void addShader(const std::string &shaderPath) = 0;
     virtual void removeAllShaders() = 0;
 };
+
+class IArcadeWithShaders: public virtual IArcade {
+public:
+    ~IArcadeWithShaders() override = default;
+    virtual void addShader(const std::string &shaderPath) = 0;
+    virtual void removeAllShaders() = 0;
+};
