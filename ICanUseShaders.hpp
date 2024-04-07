@@ -9,6 +9,7 @@
 #pragma once
 #include <string>
 #include "IDriver.hpp"
+#include "IArcade.hpp"
 
 class ICanUseShaders: public virtual IDriver {
 public:
