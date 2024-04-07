@@ -20,5 +20,7 @@ public:
     virtual void flipFrame() = 0;
     virtual void bindEvent(IEvent::EventType type, EventKey key, EventCallback callback) = 0;
     virtual void setPreferredSize(std::size_t width, std::size_t height) = 0;
-    [[nodiscard]] virtual float getDeltaTime() const = 0;
+    [[nodiscard]] virtual float getDeltaTime() const = 0; // in seconds
+    [[nodiscard]] virtual std::size_t getTime() const = 0; // in ms
+    [[nodiscard]] virtual std::size_t getCurrentGameHighScore() const = 0;
 };
